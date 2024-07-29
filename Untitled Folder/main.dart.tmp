@@ -1,0 +1,42 @@
+
+import 'package:andavan/credit-card.dart';
+import 'package:andavan/top-bar.dart';
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      home: Home(),
+    ),
+  );
+}
+
+class Home extends StatelessWidget {
+  const Home({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: [
+          TopBar(height: 70),
+          CreditCard(),
+           Container(
+            padding:EdgeInsets.all(10),
+            width:  double.infinity,
+            child: Text(
+            "   New Action",
+            style:TextStyle(
+              color: Colors.black,
+              fontWeight: FontWeight.w800,
+              fontSize: 20,
+            ),
+          ),
+        
+        )
+          
+        ],
+      ),
+    );
+  }
+  }
